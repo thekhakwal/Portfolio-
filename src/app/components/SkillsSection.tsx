@@ -1,53 +1,64 @@
+'use client';
+
 import React from 'react';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiGithub,
+  SiFigma,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+} from 'react-icons/si';
 
 const skills = [
-  { name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-  { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-  { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { name: 'TailwindCSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-  { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-  { name: 'ReactJS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-  { name: 'WordPress', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
-  { name: 'Sass', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg' },
+  { name: 'HTML', icon: SiHtml5, color: 'text-orange-500' },
+  { name: 'CSS', icon: SiCss3, color: 'text-blue-500' },
+  { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400' },
+  { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-400' },
+  { name: 'React', icon: SiReact, color: 'text-cyan-400' },
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
+  { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
+  { name: 'Tailwind', icon: SiTailwindcss, color: 'text-cyan-300' },
+  { name: 'GitHub', icon: SiGithub, color: 'text-gray-300' },
+  { name: 'Figma', icon: SiFigma, color: 'text-pink-400' },
 ];
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-16 px-6 text-white">
-      <div className="max-w-4xl mx-auto relative z-10 mb-12">
-        <h2 className="text-center text-6xl font-bold bg-gradient-to-r from-pink-500 to-blue-400 text-transparent bg-clip-text">
-          MY Skills
-        </h2>
+    <section id="technologies" className="py-20 px-6 bg-[#0d0f17] text-white">
+      <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+        My Tech Stack
+      </h2>
+
+      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        {skills.map((skill, index) => {
+          const Icon = skill.icon;
+          return (
+            <div
+              key={index}
+              className={`w-32 h-32 bg-[#1a1c23] flex flex-col items-center justify-center rounded-xl shadow-[0_0_20px_rgba(236,72,153,0.1),0_0_10px_rgba(6,182,212,0.1)] hover:shadow-[0_0_25px_rgba(236,72,153,0.3),0_0_15px_rgba(6,182,212,0.2)] transition-all duration-500 hover:scale-110 animate-float`}
+            >
+              <Icon className={`text-4xl mb-2 ${skill.color}`} />
+              <p className="text-xs text-center text-gray-300">{skill.name}</p>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Row 1: Left to Right */}
-      <div className="grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-items-center">
-        {skills.slice(0, 5).map((skill, index) => (
-          <div key={index} className="flex flex-col items-center group">
-            <img
-              src={skill.logo}
-              alt={skill.name}
-              className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300"
-            />
-            <p className="text-sm text-gray-300">{skill.name}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Row 2: Right to Left */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-items-center mt-8">
-        {skills.slice(5).map((skill, index) => (
-          <div key={index} className="flex flex-col items-center group">
-            <img
-              src={skill.logo}
-              alt={skill.name}
-              className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300"
-            />
-            <p className="text-sm text-gray-300">{skill.name}</p>
-          </div>
-        ))}
-      </div>
+      <style>{`
+        @keyframes float {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-6px); }
+          100% { transform: translateY(0); }
+        }
+        .animate-float {
+          animation: float 3.5s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

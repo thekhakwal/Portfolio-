@@ -3,55 +3,55 @@ import React from 'react';
 const blogs = [
   {
     title: 'How to Become a React Developer',
-    description: 'In this article, we will cover the basics of becoming a React developer, including resources, tutorials, and tips for success.',
-    image: 'https://via.placeholder.com/300x200?text=Blog+Image', // Placeholder image URL
+    description: 'In this article, we cover the basics of becoming a React developer, including tips and resources for success.',
+    image: '/Asset/Html.png',
     link: '/blog/how-to-become-a-react-developer',
   },
   {
     title: 'Understanding JavaScript Closures',
-    description: 'JavaScript closures are an essential concept in JS. This article explores closures in-depth with code examples and use cases.',
-    image: 'https://via.placeholder.com/300x200?text=Blog+Image', // Placeholder image URL
+    description: 'Closures are a key JavaScript concept. Learn how they work with examples and practical use cases.',
+    image: 'https://via.placeholder.com/600x400?text=Closures+Blog',
     link: '/blog/understanding-javascript-closures',
   },
   {
     title: 'Tailwind CSS: The Ultimate Guide',
-    description: 'Tailwind CSS is a utility-first CSS framework. In this guide, we’ll cover how to use it effectively and how it improves workflow.',
-    image: 'https://via.placeholder.com/300x200?text=Blog+Image', // Placeholder image URL
+    description: 'A complete guide to using Tailwind CSS to build modern, responsive UIs with ease.',
+    image: 'https://via.placeholder.com/600x400?text=Tailwind+Blog',
     link: '/blog/tailwind-css-guide',
   },
 ];
 
 const BlogSection = () => {
   return (
-    <section id="blog" className="py-16 px-6 text-white">
-      <h2 className="text-3xl font-bold text-gradient mb-8">
-        Latest Blog Posts
-      </h2>
+    <section id="blog" className="py-16 px-6 text-white bg-[#0d0f17]">
+     
+        <h2 className="text-center text-6xl py-2 font-bold mb-12 bg-gradient-to-r from-pink-500 to-blue-400 text-transparent bg-clip-text">
+            Latest Blog Posts
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog, index) => (
-          <div
+          <a
             key={index}
-            className="flex flex-col bg-[#1a1c23] p-6 rounded-lg shadow-lg transition-all hover:scale-105 duration-300 group"
+            href={blog.link}
+            className="group relative rounded-xl overflow-hidden shadow-lg transition duration-500 
+              hover:shadow-[0_0_25px_rgba(236,72,153,0.3),0_0_10px_rgba(6,182,212,0.2)]"
           >
-            {/* Blog Image */}
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-48 object-cover mb-4 rounded-md group-hover:opacity-80 transition-opacity duration-300"
+            {/* Background Image */}
+            <div
+              className="h-64 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+              style={{ backgroundImage: `url(${blog.image})` }}
             />
-            {/* Blog Title */}
-            <h3 className="text-xl font-semibold text-white mb-3">{blog.title}</h3>
-            {/* Blog Description */}
-            <p className="text-sm text-gray-400 mb-4">{blog.description}</p>
-            {/* Read More Link */}
-            <a
-              href={blog.link}
-              className="text-sm text-cyan-500 hover:underline"
-            >
-              Read More
-            </a>
-          </div>
+
+            {/* Overlay Content */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-6 flex flex-col justify-end z-10">
+              <h3 className="text-xl font-bold mb-2 text-white">{blog.title}</h3>
+              <p className="text-sm text-gray-300 line-clamp-3">{blog.description}</p>
+              <span className="mt-4 text-sm text-cyan-400 group-hover:underline">
+                Read More →
+              </span>
+            </div>
+          </a>
         ))}
       </div>
     </section>
