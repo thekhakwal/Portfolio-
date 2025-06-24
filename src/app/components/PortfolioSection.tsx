@@ -1,49 +1,26 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
-
-const projects = [
-  {
-    image: '/Asset/Html.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-  {
-    image: '/portfolio/project2.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-  {
-    image: '/portfolio/project3.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-  {
-    image: '/portfolio/project4.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-  {
-    image: '/portfolio/project5.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-  {
-    image: '/portfolio/project6.png',
-    title: 'Website Coding (HTML, CSS, JS)',
-    viewLink: '#',
-    githubLink: '#',
-  },
-];
+interface Project {
+  image: string;
+  title: string;
+  viewLink: string;
+  githubLink: string;
+}
 
 const PortfolioSection = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    fetch('/Asset/Data.json')
+      .then((res) => res.json())
+      .then((data) => setProjects(data.projects));
+  }, []);
+
   return (
-    <section  id="portfolio" className="relative py-16 md:py-20 px-6 text-white overflow-hidden">
+    <section id="project" className="relative py-16 md:py-20 px-6 text-white overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0d0f17] via-[#11131b] to-[#0b0d13] -z-10" />
       <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-purple-600 rounded-full opacity-20 blur-[160px] z-0" />

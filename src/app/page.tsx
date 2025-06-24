@@ -9,6 +9,7 @@ import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
 import AchievementsSection from "./components/AchievementsSection"
 import BlogSection from "./components/BlogSection"
+import TimeLineSection from "./components/TimeLineSection"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <TimeLineSection />
         <ServicesSection />
         <AchievementsSection/>
         <PortfolioSection />

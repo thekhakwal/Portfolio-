@@ -1,32 +1,21 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import ClientWrapper from "./components/ClientWrapper";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Komal Portfolio",
-  description: "Crafted with Next.js and Tailwind CSS",
+// app/layout.tsx
+import './globals.css';
+import GlobalProvider from '@/context/GlobalProvider';
+export const metadata = {
+  title: 'Komal Kharkwal | Portfolio',
+  description: 'Frontend Developer Portfolio Website',
+  icons: {
+    icon: '/favicon.ico', // if you used PNG, write '/favicon.png'
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClientWrapper>{children}</ClientWrapper>
+      <body>
+        <GlobalProvider>
+          {children}
+        </GlobalProvider>
       </body>
     </html>
   );

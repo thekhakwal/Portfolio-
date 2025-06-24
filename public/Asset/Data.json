@@ -1,0 +1,172 @@
+{
+  "navbar": {
+    "logo": "/Asset/Logo.png"
+  },
+  "heroSection": {
+    "sequenceTexts": [
+      "WEB DEVELOPER",
+      "UI/UX DESIGNER",
+      "AR DEVELOPER"
+    ],
+    "description": "I am Komal Kharkwal – web-developer with a passion for creating beautiful and responsive websites.",
+    "buttonText": "VIEW MY WORK",
+    "buttonHref": "#portfolio",
+    "imageSrc": "/K1.jpg"
+  },
+  "about": {
+    "name": "Komal Kharkwal",
+    "location": "Uttarakhand, India",
+    "experience": "Fresher",
+    "focus": "Frontend, UI/UX",
+    "email": "me.komalkharkwal@gmail.com",
+    "title": "ABOUT ME",
+    "description": "I'm Komal Kharkwal, a web developer and UI/UX designer passionate about creating stunning and intuitive digital experiences. I blend clean, efficient code with thoughtful design to ensure both functionality and user satisfaction in every project I build.",
+    "image": "/Asset/k-icon.png",
+    "cta": {
+      "text": "Let’s Talk",
+      "href": "#contact"
+    }
+  },
+  "services": [
+    {
+      "title": "Website Development",
+      "icon": "🖥️",
+      "description": "I create websites based on your ready-made design. Whether it’s a landing page or a business card website, I will make it look great and work smoothly on any device."
+    },
+    {
+      "title": "Web Design",
+      "icon": "🎨",
+      "description": "I can design your website from scratch. I create modern, simple, and user-friendly designs that match your brand and goals."
+    },
+    {
+      "title": "WordPress Development",
+      "icon": "🅦",
+      "description": "I build websites on WordPress, making them easy to update and manage. It’s a great choice for blogs, small businesses, or portfolios."
+    }
+  ],
+   "achievements": [
+    {
+      "title": "Certified React Developer",
+      "description": "Completed a comprehensive ReactJS course to build modern, interactive web applications.",
+      "logo": "/Asset/Html.png",
+      "link": "https://example.com/react-cert"
+    },
+    {
+      "title": "Google Analytics Certified",
+      "description": "Expert in tracking and analyzing user behavior using Google Analytics.",
+      "logo": "https://img.icons8.com/ios/452/google-analytics.png",
+      "link": "https://example.com/analytics-cert"
+    },
+    {
+      "title": "Full-Stack Web Development",
+      "description": "Built full-stack projects using Node.js, Express, MongoDB, and React.",
+      "logo": "https://img.icons8.com/ios/452/nodejs.png",
+      "link": "https://example.com/fullstack-cert"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2019",
+      "title": "Started My Web Journey",
+      "description": "Learned HTML, CSS, and JS. Built basic static websites."
+    },
+    {
+      "year": "2020",
+      "title": "Freelancing",
+      "description": "Worked on freelance projects and improved my practical skills."
+    },
+    {
+      "year": "2021",
+      "title": "UI/UX Design",
+      "description": "Mastered Figma and designed clean, modern interfaces."
+    },
+    {
+      "year": "2022",
+      "title": "React & Next.js",
+      "description": "Developed dynamic web apps using React and Next.js."
+    },
+    {
+      "year": "2023",
+      "title": "Portfolio Launch",
+      "description": "Launched my personal portfolio and offered AR design services."
+    },
+    {
+      "year": "2024",
+      "title": "AR/VR Development",
+      "description": "Explored augmented reality design workflows and experiences."
+    }
+  ],
+  "projects": [
+    {
+      "image": "/Asset/Html.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    },
+    {
+      "image": "/portfolio/project2.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    },
+    {
+      "image": "/portfolio/project3.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    },
+    {
+      "image": "/portfolio/project4.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    },
+    {
+      "image": "/portfolio/project5.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    },
+    {
+      "image": "/portfolio/project6.png",
+      "title": "Website Coding (HTML, CSS, JS)",
+      "viewLink": "#",
+      "githubLink": "#"
+    }
+  ],
+
+  "blogs": [
+    {
+      "title": "How to Become a React Developer",
+      "description": "In this article, we cover the basics of becoming a React developer, including tips and resources for success.",
+      "image": "/Asset/Html.png",
+      "link": "/blog/how-to-become-a-react-developer"
+    },
+    {
+      "title": "Understanding JavaScript Closures",
+      "description": "Closures are a key JavaScript concept. Learn how they work with examples and practical use cases.",
+      "image": "https://via.placeholder.com/600x400?text=Closures+Blog",
+      "link": "/blog/understanding-javascript-closures"
+    },
+    {
+      "title": "Tailwind CSS: The Ultimate Guide",
+      "description": "A complete guide to using Tailwind CSS to build modern, responsive UIs with ease.",
+      "image": "https://via.placeholder.com/600x400?text=Tailwind+Blog",
+      "link": "/blog/tailwind-css-guide"
+    }
+  ],
+  "contact": {
+    "titleLine1": "DO YOU HAVE A PROJECT TO",
+    "titleLine2": "DISCUSS?",
+    "subtitle": "GET IN TOUCH 💬",
+    "email": "me.komalkharkwal@gmail.com",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/komalkharkwal/",
+      "instagram": "#",
+      "github": "https://github.com/thekhakwal"
+    }
+  }
+
+
+
+}

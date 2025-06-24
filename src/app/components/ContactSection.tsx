@@ -1,7 +1,31 @@
-import React from 'react';
-import { Mail, Linkedin, Instagram, Send } from 'lucide-react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { Linkedin, Instagram } from 'lucide-react';
+
+interface ContactData {
+  titleLine1: string;
+  titleLine2: string;
+  subtitle: string;
+  email: string;
+  socials: {
+    linkedin: string;
+    instagram: string;
+    github: string;
+  };
+}
 
 const ContactSection = () => {
+  const [data, setData] = useState<ContactData | null>(null);
+
+  useEffect(() => {
+    fetch('/Asset/Data.json')
+      .then((res) => res.json())
+      .then((json) => setData(json.contact));
+  }, []);
+
+  if (!data) return null;
+
   return (
     <section id="contact" className="relative py-20 px-6 text-white bg-[#0d0f17] overflow-hidden">
       {/* Background Blur Effects */}
@@ -12,30 +36,28 @@ const ContactSection = () => {
         {/* Left Side */}
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">
-            <span className="text-pink-500">DO YOU HAVE A PROJECT TO</span><br />
-            <span className="text-blue-400">DISCUSS?</span>
+            <span className="text-pink-500">{data.titleLine1}</span><br />
+            <span className="text-blue-400">{data.titleLine2}</span>
           </h2>
-          <p className="text-lg font-light">GET IN TOUCH 💬</p>
+          <p className="text-lg font-light">{data.subtitle}</p>
 
           <div>
             <h4 className="text-gray-400 text-sm mb-1">CONTACT</h4>
-            <a href="mailto:web.smm.zty@gmail.com" className="text-blue-400 hover:underline">
-              me.komalkharkwal@gmail.com
+            <a href={`mailto:${data.email}`} className="text-blue-400 hover:underline">
+              {data.email}
             </a>
           </div>
 
           <div>
             <h4 className="text-gray-400 text-sm mb-2">SOCIAL MEDIA</h4>
             <div className="flex gap-4 text-gray-400 items-center">
-              <a href="https://www.linkedin.com/in/komalkharkwal/" target="_blank" rel="noopener noreferrer">
+              <a href={data.socials.linkedin} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 hover:text-blue-500 transition" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href={data.socials.instagram} target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5 hover:text-pink-500 transition" />
               </a>
-              
-              {/* GitHub SVG */}
-              <a href="https://github.com/thekhakwal" target="_blank" rel="noopener noreferrer">
+              <a href={data.socials.github} target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5 fill-gray-400 hover:fill-white transition"
@@ -75,7 +97,6 @@ const ContactSection = () => {
             />
           </div>
 
-          {/* Styled SEND Button */}
           <div className="relative inline-block group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
             <button

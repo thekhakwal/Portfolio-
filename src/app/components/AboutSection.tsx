@@ -1,9 +1,11 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
-import profile from '../../../public/K1.jpg'; // Adjust the path as necessary
-
+import aboutData from '../../../public/Asset/Data.json'; // adjust path if needed
 
 const AboutSection = () => {
+  const data = aboutData.about;
+
   return (
     <section id="about" className="relative py-20 px-6 text-white overflow-hidden">
       {/* Matching Themed Background */}
@@ -12,11 +14,11 @@ const AboutSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-pink-500 opacity-20 blur-[120px] rounded-full z-0" />
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
-        {/* Profile Image Box */}
+        {/* Image Box */}
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-[#0f1115] border border-gray-700/30 shadow-[0_0_60px_rgba(236,72,153,0.15)] hover:shadow-[0_0_90px_rgba(236,72,153,0.25)] transition duration-300">
             <Image
-              src={profile}
+              src={data.image}
               alt="About Me"
               width={400}
               height={500}
@@ -25,39 +27,39 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* About Text Content */}
+        {/* Text Content */}
         <div className="w-full md:w-1/2 backdrop-blur-md bg-white/5 p-6 md:p-8 rounded-2xl border border-gray-700/30 shadow-inner">
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-blue-400 text-transparent bg-clip-text">
-            ABOUT ME
+            {data.title}
           </h2>
           <p className="text-gray-300 leading-relaxed mb-4 text-base">
-            I'm <span className="text-white font-semibold">Komal Kharkwal</span>, a web developer and UI/UX designer passionate about creating stunning and intuitive digital experiences. I blend clean, efficient code with thoughtful design to ensure both functionality and user satisfaction in every project I build.</p>
+            {data.description}
+          </p>
 
           <div className="grid grid-cols-2 gap-4 text-sm text-gray-400 mb-6">
             <div>
               <span className="block text-pink-400 font-semibold">🌍 Location</span>
-              Uttarakhand , India
+              {data.location}
             </div>
             <div>
               <span className="block text-pink-400 font-semibold">💻 Experience</span>
-              Fresher
+              {data.experience}
             </div>
             <div>
               <span className="block text-pink-400 font-semibold">🎯 Focus</span>
-              Frontend, UI, UX
+              {data.focus}
             </div>
             <div>
               <span className="block text-pink-400 font-semibold">📨 Email</span>
-              me.komalkharkwal@gmail.com
+              {data.email}
             </div>
           </div>
 
-          {/* CTA Button */}
           <a
-            href="#contact"
+            href={data.cta.href}
             className="inline-block px-6 py-2 border border-pink-500 rounded-full text-sm text-pink-400 hover:bg-pink-500/20 hover:text-white transition"
           >
-            Let’s Talk
+            {data.cta.text}
           </a>
         </div>
       </div>
