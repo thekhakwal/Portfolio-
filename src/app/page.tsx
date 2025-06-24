@@ -10,9 +10,19 @@ import Footer from "./components/Footer"
 import AchievementsSection from "./components/AchievementsSection"
 import BlogSection from "./components/BlogSection"
 import TimeLineSection from "./components/TimeLineSection"
+import Head from "next/head"
 
 export default function Home() {
   return (
+
+<>
+     <Head>
+        <title>Komal Kharkwal | Frontend Developer</title>
+        <meta name="description" content="I'm Komal Kharkwal, a web developer and UI/UX designer passionate about creating stunning and intuitive digital experiences. I blend clean, efficient code with thoughtful design to ensure both functionality and user satisfaction in every project I build." />
+        <meta name="keywords" content="Komal Kharkwal, Abhiko, Abhishek Kumar Majumdar, Frontend Developer, UI UX, AR" />
+        <meta property="og:image" content="../public/Asset/Logo.png" />
+      </Head>
+      
 <main className="min-h-screen text-white font-sans" style={{ backgroundColor: "var(--background)" }}>
       <div className="max-w-7xl mx-auto">
         <Navbar />
@@ -28,5 +38,6 @@ export default function Home() {
         <Footer/>
       </div>
     </main>
+    </>
   )
 }
