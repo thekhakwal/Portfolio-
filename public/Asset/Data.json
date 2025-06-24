@@ -50,18 +50,6 @@
       "description": "Completed a comprehensive ReactJS course to build modern, interactive web applications.",
       "logo": "/Asset/Html.png",
       "link": "https://example.com/react-cert"
-    },
-    {
-      "title": "Google Analytics Certified",
-      "description": "Expert in tracking and analyzing user behavior using Google Analytics.",
-      "logo": "https://img.icons8.com/ios/452/google-analytics.png",
-      "link": "https://example.com/analytics-cert"
-    },
-    {
-      "title": "Full-Stack Web Development",
-      "description": "Built full-stack projects using Node.js, Express, MongoDB, and React.",
-      "logo": "https://img.icons8.com/ios/452/nodejs.png",
-      "link": "https://example.com/fullstack-cert"
     }
   ],
   "timeline": [
@@ -69,66 +57,11 @@
       "year": "2019",
       "title": "Started My Web Journey",
       "description": "Learned HTML, CSS, and JS. Built basic static websites."
-    },
-    {
-      "year": "2020",
-      "title": "Freelancing",
-      "description": "Worked on freelance projects and improved my practical skills."
-    },
-    {
-      "year": "2021",
-      "title": "UI/UX Design",
-      "description": "Mastered Figma and designed clean, modern interfaces."
-    },
-    {
-      "year": "2022",
-      "title": "React & Next.js",
-      "description": "Developed dynamic web apps using React and Next.js."
-    },
-    {
-      "year": "2023",
-      "title": "Portfolio Launch",
-      "description": "Launched my personal portfolio and offered AR design services."
-    },
-    {
-      "year": "2024",
-      "title": "AR/VR Development",
-      "description": "Explored augmented reality design workflows and experiences."
     }
   ],
   "projects": [
     {
       "image": "/Asset/Html.png",
-      "title": "Website Coding (HTML, CSS, JS)",
-      "viewLink": "#",
-      "githubLink": "#"
-    },
-    {
-      "image": "/portfolio/project2.png",
-      "title": "Website Coding (HTML, CSS, JS)",
-      "viewLink": "#",
-      "githubLink": "#"
-    },
-    {
-      "image": "/portfolio/project3.png",
-      "title": "Website Coding (HTML, CSS, JS)",
-      "viewLink": "#",
-      "githubLink": "#"
-    },
-    {
-      "image": "/portfolio/project4.png",
-      "title": "Website Coding (HTML, CSS, JS)",
-      "viewLink": "#",
-      "githubLink": "#"
-    },
-    {
-      "image": "/portfolio/project5.png",
-      "title": "Website Coding (HTML, CSS, JS)",
-      "viewLink": "#",
-      "githubLink": "#"
-    },
-    {
-      "image": "/portfolio/project6.png",
       "title": "Website Coding (HTML, CSS, JS)",
       "viewLink": "#",
       "githubLink": "#"
