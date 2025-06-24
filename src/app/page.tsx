@@ -1,4 +1,5 @@
 // pages/index.tsx
+"use client";
 import Navbar from "@/app/components/Navbar"
 import HeroSection from "@/app/components/HeroSection"
 import SkillsSection from "./components/SkillsSection"
@@ -12,7 +13,17 @@ import BlogSection from "./components/BlogSection"
 import TimeLineSection from "./components/TimeLineSection"
 import Head from "next/head"
 
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
+
 export default function Home() {
+    useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
   return (
 
 <>

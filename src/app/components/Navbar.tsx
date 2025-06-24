@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-6 lg:py-4 py-0 flex justify-between items-center border border-gray-600/30 rounded-full bg-[#0f1115] text-white mt-6 z-50 relative">
+      <nav data-aos="zoom-out-up" className="w-full px-6 lg:py-2 py-0 flex justify-between items-center border border-gray-600/30 rounded-full bg-[#0f1115] text-white mt-6 z-50 relative">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3 font-semibold">
           {logoSrc && (

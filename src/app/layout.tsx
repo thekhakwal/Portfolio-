@@ -4,13 +4,13 @@ import GlobalProvider from '@/context/GlobalProvider';
 
 
 export const metadata = {
-  title: 'Komal Kharkwal | Abhiko | Abhishek Kumar Majumdar – Frontend Developer Portfolio',
-  description: 'Portfolio of Komal Kharkwal a.k.a Abhiko, built by Abhishek Kumar Majumdar – Expert in frontend, UI/UX, and AR Development.',
+  title: 'Komal Kharkwal – Frontend Developer Portfolio',
+  description: 'Portfolio of Komal Kharkwal, built by Komal kharkwal – Expert in frontend, UI/UX, and AR Development.',
   keywords: ['Komal Kharkwal', 'Abhiko', 'Abhishek Kumar Majumdar', 'Frontend Developer', 'UI/UX Designer', 'AR Developer', 'Next.js Portfolio'],
   authors: [{ name: 'Abhishek Kumar Majumdar', url: 'https://Abhishekkumarmajumdar.in' }],
   openGraph: {
     title: 'Komal Kharkwal | Frontend Developer',
-    description: 'Creative frontend portfolio website by Abhiko & Abhishek Kumar Majumdar.',
+    description: 'Creative frontend portfolio website by Komal Kharkwal.',
     url: 'https://komalkharkwal.vercel.app',
     siteName: 'Komal Kharkwal Portfolio',
     images: [
