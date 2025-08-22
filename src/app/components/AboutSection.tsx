@@ -10,7 +10,7 @@ const AboutSection = () => {
     <section id="about" className="relative py-20 px-6 text-white overflow-hidden">
       {/* Matching Themed Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0d0f17] via-[#11131b] to-[#0b0d13] -z-10" />
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-purple-600 opacity-20 blur-[160px] rounded-full z-0" />
+  
       <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-pink-500 opacity-20 blur-[120px] rounded-full z-0" />
 
       <div data-aos="fade-right" className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
