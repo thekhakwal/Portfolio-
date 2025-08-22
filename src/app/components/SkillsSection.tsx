@@ -32,7 +32,6 @@ const SkillsSection = () => {
     <section id="technologies" className="py-20 px-6 text-white">
  {/* Matching Themed Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0d0f17] via-[#11131b] to-[#0b0d13] -z-10" />
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-purple-600 opacity-20 blur-[160px] rounded-full z-0" />
       <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-pink-500 opacity-20 blur-[120px] rounded-full z-0" />
 
       <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
